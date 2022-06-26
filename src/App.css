@@ -46,19 +46,40 @@ table {
 
 body {
   text-align: center;
-  background-color: #74f59e;
+  background-color: #dbfbe5;
 }
 
-.Parameters {
+.wrapper {
+    width: 230px;
+    background-color: #fefcf2;
+    margin: 10px auto;
+    border: 1px double #caddc2;
 
-  font-size: calc(10px + 2vmin);
-
+    border-radius: 5px;
 }
 
 .container {
-	margin-top: 10px;
-	background-color: #43eb7a;
+    min-height: 18px;
+    padding: 4px;
+    margin: 4px;
+
+    border-radius: 5px;
 }
 
 
+span {
+    margin: 5px;
+    }
 
+input {
+
+        min-width: 75px;
+        padding: 4px;
+        margin: 4px;
+
+        border-radius: 5px;
+    }
+
+    p {
+        margin: 2px;  
+    }

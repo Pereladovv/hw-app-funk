@@ -1,20 +1,19 @@
-import React from 'react';
-import Mass from './Mass';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux'
 
 function Volume(props) {
-
-
+    const [volume, setVolume] = useState(0)
+    const dispatch = useDispatch()
     function getVolume() {
         let volume = parseInt(props.length) * parseInt(props.width) * parseInt(props.height);
-        /* Здесь перед return надо отправить данные в REDUX */
+/*         dispatch({ type: 'volume', volume: 100}) */
         return volume // вызов метода расчёта объёма
     }
 
     return (
         <div className='container'>
             <span>Объём: </span>
-            {getVolume()} м  {/* Вывод периметра */}
-            <Mass volume={getVolume()}/>
+            {getVolume()} м³  {/* Вывод объема */}
         </div>
     );
 }
