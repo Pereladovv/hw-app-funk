@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux'
 
 function Volume(props) {
-    const [volume, setVolume] = useState(0)
     const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch({ type:'SET_VOLUME', payload: getVolume() })
+    });
+
     function getVolume() {
-        let volume = parseInt(props.length) * parseInt(props.width) * parseInt(props.height);
-/*         dispatch({ type: 'volume', volume: 100}) */
-        return volume // вызов метода расчёта объёма
+        return parseInt(props.length) * parseInt(props.width) * parseInt(props.height)
     }
 
     return (
         <div className='container'>
             <span>Объём: </span>
-            {getVolume()} м³  {/* Вывод объема */}
+            {getVolume()} м³
         </div>
     );
 }

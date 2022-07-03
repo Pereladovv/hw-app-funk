@@ -8,8 +8,14 @@ import {createStore} from "redux";
 
 function counterReducer(state = { volume: 0 }, action) {
     switch (action.type) {
-        case 'volume':
-            return { volume: state.volume }
+        case 'GET_VOLUME':
+            return state.volume
+        case 'SET_VOLUME':
+            state = {
+                ...state,
+                volume: action.payload
+            }
+            return state
         default:
             return state
     }
