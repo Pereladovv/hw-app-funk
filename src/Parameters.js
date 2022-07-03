@@ -31,7 +31,7 @@ function Parameters() {
         
         <Perimeter length={length} width={width} /> {/* Передаём пропсами значения длины и ширины в Perimeter.js */}
         <Volume length={length} width={width} height={height}/> {/* Передаём пропсами значения длины, ширины b высоты в Volume.js */}
-        <Mass volume={10}/>
+        <Mass volume={20}/>
     </div>
 
   );
