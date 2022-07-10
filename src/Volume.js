@@ -1,7 +1,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 function Volume(props) {
+/*  */
+    const selectorMass = useSelector((state) => state.mass)
+    
+/*  */
+
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -16,6 +22,7 @@ function Volume(props) {
         <div className='container'>
             <span>Объём: </span>
             {getVolume()} м³
+            
         </div>
     );
 }

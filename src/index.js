@@ -16,8 +16,16 @@ function counterReducer(state = { volume: 0 }, action) {
                 volume: action.payload
             }
             return state
-        default:
-            return state
+
+        case 'GET_MASS':
+            return state.mass
+        case 'SET_MASS':
+            state = {
+                ...state,
+                mass: action.payload
+            }
+            default:
+                return state
     }
 }
 let store = createStore(counterReducer)

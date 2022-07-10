@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Volume from './Volume';
 import Perimeter from './Perimeter';
 import Mass from './Mass';
+import { useSelector } from 'react-redux'
 
 function Parameters() {
   // Объявление переменной состояния
@@ -9,7 +10,11 @@ function Parameters() {
     const [length, setLength] = useState(0)
     const [width, setWidth] = useState(0)
     const [height, setHeight] = useState(0)
-    
+/*  */
+    const selectorMass = useSelector((state) => state.mass)
+
+
+/*  */
     function сhangeLength (event) {
       setLength(event.target.value);
     }
@@ -31,7 +36,8 @@ function Parameters() {
         
         <Perimeter length={length} width={width} /> {/* Передаём пропсами значения длины и ширины в Perimeter.js */}
         <Volume length={length} width={width} height={height}/> {/* Передаём пропсами значения длины, ширины b высоты в Volume.js */}
-        <Mass volume={20}/>
+        <Mass/>
+        <p>Масса из REDUX: {selectorMass} кг</p>
     </div>
 
   );
