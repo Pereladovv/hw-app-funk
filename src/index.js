@@ -24,6 +24,25 @@ function counterReducer(state = { volume: 0 }, action) {
                 ...state,
                 mass: action.payload
             }
+            return state
+
+            case 'GET_MASS_ALL':
+                return state.massAll
+            case 'SET_MASS_ALL':
+                state = {
+                    ...state,
+                    massAll: action.payload
+            }
+            return state
+
+            case 'GET_DENSITY':
+                return state.density
+            case 'SET_DENSITY':
+                state = {
+                    ...state,
+                    density: action.payload
+            }
+            return state
             default:
                 return state
     }
