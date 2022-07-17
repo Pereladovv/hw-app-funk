@@ -18,10 +18,19 @@ function Parameters() {
     const selectorMassAll = useSelector((state) => state.massAll)
 
     const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch({ type:'SET_LENGTH', payload: length })
+    });
+    useEffect(() => {
+        dispatch({ type:'SET_WIDTH', payload: width })
+    });
+    useEffect(() => {
+        dispatch({ type:'SET_HEIGHT', payload: height })
+    });
     useEffect(() => {
         dispatch({ type:'SET_DENSITY', payload: density })
     });
-
 
     function сhangeLength (event) {
         setLength(event.target.value);
@@ -44,11 +53,11 @@ function Parameters() {
         <input type="number" defaultValue={width} onChange={сhangeWidth} />
         <p>Высота в м: {height}</p>
         <input type="number" defaultValue={height} onChange={сhangeHeight} />
-        <Perimeter length={length} width={width} /> {/* Передаём пропсами значения длины и ширины в Perimeter.js */}
-        <Volume length={length} width={width} height={height}/> {/* Передаём пропсами значения длины, ширины b высоты в Volume.js */}
+        <Perimeter/>
+        <Volume/>
         <Mass/>
-        <p className="container">Масса воды из REDUX: {selectorMass} кг</p>
 
+        <p className="container">Масса воды из REDUX: {selectorMass} кг</p>
         <p>Плотность в кг/м³: {density}</p>
         <input type="number" defaultValue={density} onChange={сhangeDensity} />
         <p className="container">Масса из калькулятора: {selectorMassAll} кг</p>        

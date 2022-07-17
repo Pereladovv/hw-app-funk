@@ -1,10 +1,12 @@
 import React from 'react';
+import { useSelector } from 'react-redux'
 
-
-function Perimeter(props) {
-
+function Perimeter() {
+    const length = useSelector((state) => state.length)
+    const width = useSelector((state) => state.width)
+    
     function getPerimeter () {
-        return parseInt(props.length) * parseInt(props.width)// вызов метода расчёта периметра
+        return parseInt(length) * parseInt(width)// вызов метода расчёта периметра
     }
 
     return (

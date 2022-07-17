@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 
-function Mass(props) {
+function Mass() {
     const densityOfWater = 1000
     const volume = useSelector((state) => state.volume)
     const density = useSelector((state) => state.density)

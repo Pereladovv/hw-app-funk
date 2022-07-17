@@ -17,13 +17,13 @@ function counterReducer(state = { volume: 0 }, action) {
             }
             return state
 
-        case 'GET_MASS':
-            return state.mass
-        case 'SET_MASS':
-            state = {
-                ...state,
-                mass: action.payload
-            }
+            case 'GET_MASS':
+                return state.mass
+            case 'SET_MASS':
+                state = {
+                    ...state,
+                    mass: action.payload
+                }
             return state
 
             case 'GET_MASS_ALL':
@@ -35,6 +35,33 @@ function counterReducer(state = { volume: 0 }, action) {
             }
             return state
 
+            case 'GET_LENGTH':
+                return state.length
+            case 'SET_LENGTH':
+                state = {
+                    ...state,
+                    length: action.payload
+            }
+            return state
+
+            case 'GET_WIDTH':
+                return state.width
+            case 'SET_WIDTH':
+                state = {
+                    ...state,
+                    width: action.payload
+            }
+            return state
+
+            case 'GET_HEIGHT':
+                return state.height
+            case 'SET_HEIGHT':
+                state = {
+                    ...state,
+                    height: action.payload
+            }
+            return state
+
             case 'GET_DENSITY':
                 return state.density
             case 'SET_DENSITY':
@@ -43,6 +70,7 @@ function counterReducer(state = { volume: 0 }, action) {
                     density: action.payload
             }
             return state
+
             default:
                 return state
     }

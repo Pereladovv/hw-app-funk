@@ -25,6 +25,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    font-family: 'Open Sans',sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -50,12 +51,12 @@ body {
 }
 
 .wrapper {
-    width: 400px;
+    width: 300px;
     background-color: #fefcf2;
-    margin: 10px auto;
-    border: 1px solid #caddc2;
+    margin: auto;
+    box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 20%);
+    padding: 10px;
 
-    border-radius: 5px;
 }
 
 .container {
