@@ -56,8 +56,18 @@ body {
     margin: auto;
     box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 20%);
     padding: 10px;
-
 }
+
+.wrapperTwo {
+    width: 300px;
+    background-color: #fefcf2;
+    margin: auto;
+    box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 20%);
+    padding: 10px;
+    margin-top: 5px;
+}
+
+
 
 .container {
     min-height: 18px;
