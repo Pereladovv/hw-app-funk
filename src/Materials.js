@@ -34,7 +34,6 @@ function Materials() {
     return (
         <div className="wrapperTwo">
             <DataLoading isLoading={appState.loading} materials={appState.materials} />
-
         </div>
 
     );
